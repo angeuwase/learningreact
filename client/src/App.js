@@ -59,14 +59,15 @@ function App() {
     <div className="container">
 
     <Route path='/surveys/' render={(prop)=>(
-      <>
-      <Header title={tenantFormData.title} color={tenantFormData.styling.headingColor} fontFamily={tenantFormData.styling.fontFamilyHeader}/>
-      <form>
-      {tenantFormData.questions.map((question)=>(<Question question={question} fontFamily={tenantFormData.styling.fontFamilyQuestions}/>))}
-      <Button text = {tenantFormData.styling.buttonText} color = {tenantFormData.styling.buttonColor} />
-      </form>
-      </>
-    )} />
+        <>
+        <Header title={tenantFormData.title} color={tenantFormData.styling.headingColor} fontFamily={tenantFormData.styling.fontFamilyHeader}/>
+        <form>
+        {tenantFormData.questions.map((question)=>(<Question question={question} fontFamily={tenantFormData.styling.fontFamilyQuestions}/>))}
+        <Button text = {tenantFormData.styling.buttonText} color = {tenantFormData.styling.buttonColor} />
+        </form>
+        </>
+    )} 
+    />
     </div>
     </Router>
   );
