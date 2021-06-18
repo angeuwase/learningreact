@@ -9,8 +9,9 @@ const Question = (props) => {
     return (
         
 
-        <div> 
-            <h3 key={props.question.key} style={questionStyle} >{props.question.text}</h3>
+        <div className='form-control' style={questionStyle}> 
+            <label>{props.question.text}</label><br></br>
+            <input type="text" name={props.question.text}/>
         </div>
     )
 }

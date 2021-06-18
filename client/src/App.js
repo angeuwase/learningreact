@@ -1,9 +1,16 @@
 import Header from './components/Header'
 import Button from './components/Button'
 import Question from './components/Question'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 function App() {
+
+  
+
+
+
+
 
 
   const [tenantFormData, setTenantData] = useState({
@@ -32,15 +39,36 @@ function App() {
   
   })
 
+  useEffect(() => {
+    let urlElements = window.location.href.split('/')
+    let tenant = urlElements[4]
+    const fetchData = async(tenant) => {
+      const res = await fetch(`http://localhost:8000/${tenant}`)
+      const data = await res.json()
+      setTenantData(data[0])
+  }
+
+  fetchData(tenant)
+
+
+},[])
+
+
   return (
+    <Router>
     <div className="container">
+
+    <Route path='/surveys/' render={(prop)=>(
+      <>
       <Header title={tenantFormData.title} color={tenantFormData.styling.headingColor} fontFamily={tenantFormData.styling.fontFamilyHeader}/>
+      <form>
       {tenantFormData.questions.map((question)=>(<Question question={question} fontFamily={tenantFormData.styling.fontFamilyQuestions}/>))}
       <Button text = {tenantFormData.styling.buttonText} color = {tenantFormData.styling.buttonColor} />
-
-
-
+      </form>
+      </>
+    )} />
     </div>
+    </Router>
   );
 }
 

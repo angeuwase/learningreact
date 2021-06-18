@@ -1,0 +1,60 @@
+{
+  "tenantA": [
+    {
+      "title": "Client feedback Form",
+      "questions": [
+        {"id": 1,
+        "text": "What is your name?"
+      },
+        {"id": 2,
+        "text": "What is your email address?"
+      },
+        {"id": 3,
+        "text": "How would you rate the service?"
+      }, 
+      {"id": 4,
+        "text": "Will you come again?"
+      } 
+    ],
+      "styling": {
+        "buttonColor" : "orange",
+        "buttonText" : "Next",
+        "fontFamilyHeader" : "sans-serif",
+        "fontFamilyQuestions" : "Ariel",
+        "headingColor" : "red"
+      }
+    
+    }
+  ],
+
+  "tenantB": [
+    {
+      "title": "Service Feedback Form",
+      "questions": [
+        {"id": 1,
+        "text": "What is your name?"
+      },
+        {"id": 2,
+        "text": "What is your email address?"
+      },
+        {"id": 3,
+        "text": "Which agent did you work with?"
+      }, 
+      {"id": 4,
+        "text": "How would you rate the service?"
+      } 
+    ],
+      "styling": {
+        "buttonColor" : "green",
+        "buttonText" : "Submit Feedback",
+        "fontFamilyHeader" : "sans-serif",
+        "fontFamilyQuestions" : "Ariel",
+        "headingColor" : "green"
+      }
+    
+    }
+  ]
+
+
+
+  }
