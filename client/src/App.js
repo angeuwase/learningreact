@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import LandingPage from './components/LandingPage'
 import Button from './components/Button'
 import Question from './components/Question'
 import {useState, useEffect} from 'react'
@@ -68,6 +69,7 @@ function App() {
         </>
     )} 
     />
+    <Route exact path='/' component={LandingPage} />
     </div>
     </Router>
   );
